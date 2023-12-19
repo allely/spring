@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표 설명</title>
+    <style>
+        th, td{
+           padding:5px
+        }
+    </style>
+</head>
+<body>
+    <!--id : 자바스크립트나 css에서 html태그를 변수로 이용하여 태그내용에 접근할 수 있다.-->
+    <p id=""summary">다음 표는 THML5를 지원하는 모던(Modern Browser)를 정리한 것입니다. 최신 버전일수록 HTML5를 좀 더 많이 지원하기 때문에 최신 버전을 다운로드하는 것이 좋습니다.</p>
+    <table border="1", aria-describedby="summary">
+        <caption>
+            <strong>Modern Browser</strong>
+        </caption>
+        <tr>
+            <th>브라우저</th>
+            <th>제조업체</th>
+            <th>다운로드</th>
+        </tr>
+        <tr>
+            <td>크롬(Chrome)</td>
+            <td>Google</td>
+            <td>https://www.google.com/Chrome/</td>
+        </tr>
+        <tr>
+            <td>파이어폭스(Firefox)</td>
+            <td>Mozilla</td>
+            <td>https://www.mozilla.org/ko/firefox/</td>
+        </tr>
+        <tr>
+            <td>엣지(Edge)</td>
+            <td>Microsoft</td>
+            <td>https://www.Microsoft.com/kr-kr/windows/microsoft-dege</td>
+        </tr>
+    </table>
+
+    <hr>
+    <!--1분복습-->
+    <table border="1">
+        <caption>
+            <strong>재무상태표</strong>
+        </caption>
+        <tr>
+            <td rowspan="2">자산: 현금, <br />현금 외 자산</rowspan=></td>
+            <td> 부채 :차입금</td>
+        </tr>
+        <tr>
+            <td>자본: 자본금, 이익잉여금</td>
+        </tr>
+    </table>
+
+</body>
+</html>

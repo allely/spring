@@ -1,0 +1,125 @@
+package com.me.lib.dao;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.me.common.DBConnPool;
+import com.me.dto.Criteria;
+import com.me.lib.dto.BookDto;
+
+public class BookDao extends DBConnPool{
+	/**
+	 * 도서의 상세 정보를 조회 후 반환한다.
+	 * @param no
+	 * @return 도서정보(BookDto)
+	 */
+	public BookDto view(String no) {
+		
+		String sql = "SELECT * FROM BOOK WHERE NO = ?";
+					
+		BookDto bookDto = new BookDto();
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, no);
+			
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				bookDto.setNum(rs.getString("no"));
+				bookDto.setTitle(rs.getString("title"));
+				bookDto.setAuthor(rs.getString("author"));
+				bookDto.setRentyn(rs.getString("rentyn"));
+				// setRentyn() 에 rentynStr도 같이 입력되도록 함. 
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return bookDto;	
+	}
+	
+	/**
+	 * 도서목록을 조회 후 반환한다.
+	 * @return 도서목록
+	 */
+	public List<BookDto> getList(Criteria cri){
+		List<BookDto> list = new ArrayList<>();
+		
+		String where = "";
+		if(!"".equals(cri.getSearchField())
+				&& !"".equals(cri.getSearchWord())) {
+			where = "WHERE " + cri.getSearchField()
+					+ " LIKE '%" + cri.getSearchWord() + "%'";
+		}
+		String sql = "SELECT * \r\n"
+				+ "	FROM BOOK \r\n"
+				+ where
+				+ "	ORDER BY NO DESC\r\n";
+		try {
+			// pageingQuery를 이용시 페이지 처리를 위한 파라메터 세팅을 해주어야 한다.
+			sql = pageingQuery(sql);
+			System.out.println(sql);
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, cri.getStartNum());
+			pstmt.setInt(2, cri.getEndNum());
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				String no = rs.getString("no");
+				String title = rs.getString("title");
+				String author = rs.getString("author");
+				String rentyn = rs.getString("rentyn");
+				BookDto dto = new BookDto(no, title, author, rentyn);
+				list.add(dto);
+			}
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		return list;
+	}
+
+	public int getTotalCnt(Criteria cri) {
+		int res = 0;
+		String where = "";
+		if(!"".equals(cri.getSearchField())
+				&& !"".equals(cri.getSearchWord())) {
+			where = "WHERE " + cri.getSearchField()
+					+ " LIKE '%" + cri.getSearchWord() + "%'";
+		}
+		String sql = "SELECT COUNT(*) FROM BOOK "
+					+ where;
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				res = rs.getInt(1);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return res;
+	}
+	/**
+	 * 도서 등록
+	 * @param dto
+	 * @return
+	 */
+	public int regBook(BookDto dto) {
+		int res = 0;
+		String sql = "INSERT INTO BOOK (NO, TITLE, RENTYN, AUTHOR)\r\n"
+				+ "            VALUES (SEQ_NUMBER_NO.NEXTVAL, '?', 'N', '?')";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return res;
+	}	
+}

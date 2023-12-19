@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표 만들기</title>
+    <style>
+        /*
+            태그1, 태그2에서 , : 나열연산자로 태그1과 태그2 둘 다라는 의미
+            border : 태그 주변에 선.
+            border : 두께 선모양 선색상
+        */
+        table, th, td {
+            border: 1px solid grey;
+         
+        }
+        td {
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>colgroup 연습</caption>
+        <colgroup>
+            <col style="background-color: yellowgreen;">
+            <col span="2" style="background-color: blue;">
+            <col style="background-color: yellow;"> 
+    </colgroup>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    </table>
+</body>
+</html>

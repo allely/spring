@@ -1,0 +1,38 @@
+package com.me.book.controller;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.oreilly.servlet.MultipartRequest;
+
+/**
+ * Servlet implementation class UploadProcess
+ */
+@WebServlet("/10.upload/uploadProcess")
+public class UploadProcess extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    public UploadProcess() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		response.getWriter().append("method : get").append(request.getContextPath());
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// 업로드된 파일의 정보를 출력
+		
+		// 1. MultipartRequest 객체 생성
+		MultipartRequest mr = new MultipartRequest(request, "c:/upload");
+		// name속성을 이용해 파일을 확인 
+		String fileName = mr.getFilesystemName("");
+	}
+
+}

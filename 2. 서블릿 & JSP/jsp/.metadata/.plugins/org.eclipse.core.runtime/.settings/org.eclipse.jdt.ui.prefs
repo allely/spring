@@ -1,0 +1,12 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.lang.Cloneable"><rhs name\="javax.servlet.http.Cookie"/><rhs name\="java.util.Date"/></lhs><lhs name\="javax.servlet.http.Cookie"><rhs name\="javax.servlet.http.Cookie"/></lhs><lhs name\="java.util.Collection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="com.me.common.DBConnection"><rhs name\="com.me.dao.JobDao"/></lhs><lhs name\="com.me.dao.JobDao"><rhs name\="com.me.dao.JobDao"/></lhs><lhs name\="javax.naming.Context"><rhs name\="javax.naming.InitialContext"/></lhs><lhs name\="com.me.common.DBConnPool"><rhs name\="com.me.dao.BoardDao"/><rhs name\="com.me.lib.dao.BookDao"/></lhs><lhs name\="com.me.dao.BoardDao"><rhs name\="com.me.dao.BoardDao"/></lhs><lhs name\="com.board.DBConnPool"><rhs name\="com.board.DBConnPool"/></lhs><lhs name\="com.me.dto.Criteria"><rhs name\="com.me.dto.Criteria"/></lhs><lhs name\="com.login.dto.Criteria"><rhs name\="com.login.dto.Criteria"/></lhs><lhs name\="com.me.el.MyElClass"><rhs name\="com.me.el.MyElClass"/></lhs><lhs name\="com.me.lib.dao.BookDao"><rhs name\="com.me.lib.dao.BookDao"/></lhs><lhs name\="com.oreilly.servlet.MultipartRequest"><rhs name\="com.oreilly.servlet.MultipartRequest"/></lhs><lhs name\="java.util.Date"><rhs name\="java.util.Date"/></lhs></history>
+content_assist_number_of_computers=15
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=23
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

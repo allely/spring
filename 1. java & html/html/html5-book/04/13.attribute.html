@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>여름방학 특강 신청</h1>
+    <form>
+        <fieldset>
+            <legend>수강 과목</legend>
+            <ul>
+                <li>
+                    <label>영어회화(초급) <input type="text" value="09:00~11:00" id="subj" readonly></label>
+                    <!--readonly : 읽게만 할 수 있도록-->
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>신청자</legend>
+            <ul>
+                <li>
+                    <label for="name">이름</label>
+                    <input type="text" id="uname" autofocus />
+                    <!--autofocus : 페이지 열리면 입력할 수 있도록 커서 표시-->
+                </li>
+                <li>
+                    <label for="uid">학번</label>
+                    <input 
+                        type="text" 
+                        id="uid" 
+                        placeholder="하이픈없이 입력" 
+                        maxlength="8" required />
+                    <!--placeholder : 입력창에 힌트 표시-->
+                    <!--required : 필수 필드 지정, 경고 창 변경 가능-->
+                    <!--maxlength : 지정한 수 초과한 입력 불가-->
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>교재 주문</legend>
+            <ul>
+                <li>
+                    <label>교재 <input type="number" value="1" id="subj" readonly></label>
+                    
+                </li>
+                <li>
+                    <label>워크시트<input type="text" value="1" id="subj" readonly></label>
+                    
+                </li>
+                <li>
+                    <label class="reg" for="group">단체 주문</label>
+                    <input type="number" id="group" value="10" min="10" max="100" step="10" />
+                </li>
+            </ul>
+        </fieldset>
+        <button type="submit" value="전송">신청하기</button>
+        <input type="reset" value="다시쓰기">
+    </form>
+</body>
+
+</html>

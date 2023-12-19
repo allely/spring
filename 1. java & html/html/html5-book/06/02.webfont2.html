@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구글 웹 폰트 사용</title>
+    <style>
+        /* 준비된 폰트가 없으면 인터넷에서 웹폰트 다운로드
+            @import url(주소) 사용
+        */
+        @import url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap');
+
+        /* 폰트를 사용할 셀렉터 정의 */
+        .diphy-font {
+        /*  font-family: '웹폰트 이름', 서브폰트이름 나열; */
+            font-family: 'Diphylleia', serif;
+        /* 폰트에 적용할 스타일 작성 */
+            font-size: 50px;
+            color: lightgreen;
+            padding: 15px;
+            border: 1px solid orange;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <p>브라우저 기본 글꼴 사용</p>
+    <p class="diphy-font">디피리아 폰트 사용</p>
+</body>
+</html>

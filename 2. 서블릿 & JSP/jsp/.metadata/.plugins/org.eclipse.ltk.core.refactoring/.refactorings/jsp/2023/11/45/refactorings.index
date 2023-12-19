@@ -1,0 +1,30 @@
+1699248712231	Delete element
+1699252032455	Copy compilation unit
+1699254523709	Copy compilation unit
+1699257160013	Copy compilation unit
+1699317949107	Delete element
+1699317963511	Copy compilation unit
+1699320682114	Copy package
+1699320709166	Delete element
+1699321512504	Copy compilation unit
+1699321553331	Delete element
+1699348117121	Delete elements
+1699350608640	Rename type 'Job'
+1699413871205	Rename resource 'session'
+1699426796702	Delete element
+1699426802873	Rename resource 'logout.jsp'
+1699427772614	Rename type 'loginProcess'
+1699489638007	Delete element
+1699492324939	Rename resource 'logoutProcess,jsp.jsp'
+1699493060246	Move 'logoutProcess.jsp' to 'servletEx'
+1699500679590	Delete element
+1699500724252	Rename type 'logoutController'
+1699515259569	Rename resource 'Inc'
+1699515487810	Rename resource 'OuterPage.jsp'
+1699519636887	Delete element
+1699575764040	Rename resource 'ForwardMain.jsp'
+1699577678601	Rename resource 'UseBeamAction.jsp'
+1699584870964	Rename type 'BoardDetail'
+1699602056290	Delete element
+1699604200315	Rename type 'JspFunction'
+1699606509563	Delete element

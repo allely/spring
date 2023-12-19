@@ -1,0 +1,7 @@
+package com.me.book.service;
+
+public class FileUploadService {
+	private int maxSize = 1024*1000;
+	private String uploadDir = "c:/upload";
+	private String encode = "UTF-8";
+}

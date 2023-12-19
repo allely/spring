@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>드롭다운 목록</title>
+    <style>
+        body {
+            background-color: #fff;
+        }
+        form fieldset {
+            margin-bottom: 25px;    /* fieldset 바깥 중 아래 여유공간 
+            amargin : 태그와 태그 사이의 공간*/
+        }
+        form legend {
+            font-size: 15px;
+            font-weight: 600   /* <b>, <strong>과 같은 기능 */
+        }
+        .reg { 
+            font-size: 14px;
+            width: 30px;       /* 글자가 쓰일 공간 너비 */
+            color: #390;
+            font-weight: 600;
+            float: left;
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <h1>여름방학 특강 신청</h1>
+        <fieldset>
+            <legend>수강 신청인</legend>
+            <ul>
+                <li>
+                    <label class="reg" for="id">학번 </label>
+                    <input type="text" id="id" autofocus />
+                </li>
+                <li>
+                    <label class="reg" fir="name">이름 </label>
+                    <input type="text" id="name">
+                </li>
+                <li>
+                    <label class="reg" for="class">학과 </label>
+                    <!--select : 드롭다운 목록-->
+                    <!--size : 화면에 표시될 드롭다운 메뉴의 항목 개수(+multiple 이 기본) -->
+                    <!--multiple : 여러 개의 옵션이 함께 표시, 
+                                size(=4 기본)와 함께 제거 시 깔끔함-->
+                    <select size="10" id="class" multiple>
+                        <!--seleceted : 기본 선택 옵션-->
+                        <!--value : 옵션 선택 시 서버로 넘겨질 값 지정-->
+                        <optgroup label="공과대학">
+                            <option value="archi">건축공학과</option>
+                            <option value="mecahnic">기계공학과</option>
+                            <option value="indust">산업공학과</option>
+                            <option value="elec">전기전자공학과</option>
+                            <option value="computer">컴퓨터공학과</option>
+                            <option value="chemical" selected>화학공학과</option>
+                        </optgroup>
+                        <optgroup label="인문대학">
+                            <option value="histroy">사학과</option>
+                            <option value="lang">어문학부</option>
+                            <option value="philo">철학</option>
+
+                        </optgroup>
+
+                    </select>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+
+</html>

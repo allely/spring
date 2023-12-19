@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀 병합</title>
+    <style>
+        table, th, td {
+            border: 1px     /*테이블 테두리 */
+            solid gray
+        }
+        th {
+            padding: 15px   /*공간여백*/   
+        }
+        tr > td:nth-child(odd) {    /*tr태그에서 td태그가 홀수번인 경우만 적용*/
+            width: 10px             /*여기서는 홀수번에 td태그가 없으므로 적용되지 않음*/
+        }
+        tr > td:nth-child(even) {   /*짝수번째 열의 너비는 300px*/
+            width: 300px
+        }
+
+    </style>+
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>이름</th>
+            <td>홍길동</td>
+            <th>연락처</th>
+            <td>010-1111-2222</td>
+        </tr>
+        <tr>
+            <th>주소</th>
+            <td colspan="3">서울시</td>     <!--3개 열 합침-->
+        </tr>
+        <tr>
+            <th>자기소개</th>
+            <td colspan="3">저는 개발자를 목표로 하고 있습니다.</td>
+        </tr>
+    </table>
+</body>
+</html>

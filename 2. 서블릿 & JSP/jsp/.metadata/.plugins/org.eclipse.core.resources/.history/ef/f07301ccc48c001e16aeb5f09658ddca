@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 도서 등록 화면 -->
+	<%@include file="/header.jsp" %>
+	
+	<!-- 메인컨텐츠 영역 시작-->
+	<!-- Begin Page Content -->
+	<div class="container-fluid">
+		메인컨텐츠 영역
+	</div>
+	
+	<%@include file="/footer.jsp" %>
+</body>
+</html>

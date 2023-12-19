@@ -1,0 +1,61 @@
+package com.me.book.controller;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.me.dto.FileDto;
+import com.oreilly.servlet.MultipartRequest;
+
+/**
+ * Servlet implementation class UploadProcess
+ */
+@WebServlet("/10.upload/uploadProcess")
+public class UploadProcess extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    public UploadProcess() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		response.getWriter().append("method : get").append(request.getContextPath());
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// enctype을 지정하게 되면 request.getparameter
+		System.out.println("request.getParameter()" + request.getParameter("name"));
+
+		// 업로드된 파일의 정보를 출력
+		
+		/* 1. MultipartRequest 객체 생성
+		 * 	요청파일을 해당 경로제 생성
+		 * 		- 파일을 저장할 경로를 저장해야 한다.
+		 * 		- 파일의 최대 사이즈를 지정한다.
+		 * 		- 한글깨짐이 발생할 수 있으므로인코딩 타입을 저장한다.
+		 * 
+		 */
+		MultipartRequest mr = new MultipartRequest(request, "c:/upload", 1024*1000, "UTF-8");
+		System.out.println("mr.getParameter()" + mr.getParameter("name"));
+		System.out.println("mr.getParameter()" + mr.getParameter("title"));
+		System.out.println("mr.getParameter()" + mr.getParameter("cate"));
+				
+		System.out.println("mr.getParameter()" + mr.getParameterValues("cate"));
+		
+		// 요청 정보를 수집하여 DTO 객체를 생성한다.
+		FileDto fileDto = new FileDto();
+		fileDto.setName(mr.getParameter("name"));
+		fileDto.setTitle(mr.getParameter("title"));
+		fileDto.setCate(mr.getParameterValues("cate"));
+		
+		// name속성을 이용해 파일을 확인 
+		String fileName = mr.getFilesystemName("attachedFile");
+		System.out.println("파일명 : " + fileName);
+	}
+
+}

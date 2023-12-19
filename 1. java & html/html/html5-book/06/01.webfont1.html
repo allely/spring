@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구글 웹 폰트 사용</title>
+    <style>
+        /* 웹 폰트
+            1.사용할 웹폰트가 있는 주소를 가져온다.
+                import url('폰트주소')
+            2. @font-face {
+                    font-family:'글꼴 이름';
+                    src:url(글꼴 파일 경로) format(파일 유형)
+            }
+            3. font-family 속성에 폰트 종류 등록
+            4. 폰트를 적용할 스타일선택자 작성
+        */
+    
+        @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+        
+        /* 여러 개의 폰트를 사용한다면 여기에 폰트를 등록하고 사용.
+            웹폰트를 다운로드 받을 수 있다.
+            웹폰트 확장자는 .eof, woff, ttf 등 */
+
+
+        .w-font {
+        /*  font-family: '웹폰트 이름', 서브폰트이름 나열; */
+            font-family: 'Hi Melody', sans-serif;
+        /* 폰트에 적용할 스타일 작성 */
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p>Using Default Fonts</p>
+    <p class="w-font">하이멜로디 폰트 사용</p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+package com.me.dao;
+
+import java.sql.SQLException;
+
+import com.me.common.DBConnPool;
+import com.me.dto.FileDto;
+
+public class FileDao extends DBConnPool{
+
+	public int regFile(FileDto fileDto) {
+		int res = 0;
+		String sql = "INSERT INTO tbl_file (  file_no, name, title, cate, ofile, sfile)\r\n"
+				+ "VALUES ( seq_tbl_file.nextval, '?', '?', '?', '?', '?')";
+		try {
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setString(1, fileDto.getName());
+			pstmt.setString(2, fileDto.getTitle());
+			pstmt.setString(3, fileDto.getCate());
+			pstmt.setString(4, fileDto.getOfile());
+			pstmt.setString(5, fileDto.getSfile());
+			
+			res = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}		
+		return res;
+	}	
+}

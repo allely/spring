@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	<item id="NodeList/MySQLEvent">
+		<column name="Event Name" visible="true" order="0" width="100"/>
+		<column name="Type" visible="true" order="1" width="100"/>
+		<column name="Execute At" visible="true" order="2" width="100"/>
+		<column name="Interval Value" visible="true" order="3" width="100"/>
+		<column name="Interval Field" visible="true" order="4" width="100"/>
+		<column name="Body" visible="true" order="5" width="100"/>
+		<column name="Comment" visible="true" order="6" width="100"/>
+	</item>
+	<item id="NodeList/MySQLSequence">
+		<column name="Sequence name" visible="true" order="0" width="100"/>
+		<column name="Increment by" visible="true" order="1" width="100"/>
+		<column name="Minimum value" visible="true" order="2" width="100"/>
+		<column name="Maximum value" visible="true" order="3" width="101"/>
+		<column name="Cache size" visible="true" order="4" width="100"/>
+		<column name="Start value" visible="true" order="5" width="100"/>
+		<column name="Is cycle" visible="true" order="6" width="100"/>
+	</item>
+	<item id="NodeList/MySQLTable">
+		<column name="테이블명" visible="true" order="0" width="100"/>
+		<column name="Engine" visible="true" order="1" width="100"/>
+		<column name="Auto Increment" visible="true" order="2" width="100"/>
+		<column name="Data Length" visible="true" order="3" width="100"/>
+		<column name="Partitioned" visible="true" order="4" width="100"/>
+		<column name="Description" visible="true" order="5" width="100"/>
+	</item>
+	<item id="NodeList/MySQLTableColumn">
+		<column name="컬럼명" visible="true" order="0" width="100"/>
+		<column name="#" visible="true" order="1" width="100"/>
+		<column name="Data Type" visible="true" order="2" width="100"/>
+		<column name="Not Null" visible="true" order="3" width="100"/>
+		<column name="Auto Increment" visible="true" order="4" width="100"/>
+		<column name="Key" visible="true" order="5" width="100"/>
+		<column name="디폴트" visible="true" order="6" width="100"/>
+		<column name="Extra" visible="true" order="7" width="100"/>
+		<column name="Expression" visible="true" order="8" width="100"/>
+		<column name="Comment" visible="true" order="9" width="100"/>
+	</item>
+	<item id="NodeList/MySQLTableIndex">
+		<column name="인덱스명" visible="true" order="0" width="100"/>
+		<column name="Column" visible="true" order="1" width="100"/>
+		<column name="테이블" visible="true" order="2" width="100"/>
+		<column name="인덱스 유형" visible="true" order="3" width="100"/>
+		<column name="Unique" visible="true" order="4" width="100"/>
+		<column name="Cardinality" visible="true" order="5" width="100"/>
+		<column name="Comment" visible="true" order="6" width="100"/>
+	</item>
+	<item id="NodeList/MySQLTrigger">
+		<column name="트리거명" visible="true" order="0" width="100"/>
+		<column name="Timing" visible="true" order="1" width="100"/>
+		<column name="유형" visible="true" order="2" width="100"/>
+		<column name="Table" visible="true" order="3" width="100"/>
+		<column name="트리거 설명" visible="true" order="4" width="100"/>
+	</item>
+	<item id="NodeList/MySQLView">
+		<column name="View Name" visible="true" order="0" width="100"/>
+		<column name="Check Option" visible="true" order="1" width="100"/>
+		<column name="Updatable" visible="true" order="2" width="100"/>
+		<column name="Definer" visible="true" order="3" width="100"/>
+		<column name="Algorithm" visible="true" order="4" width="100"/>
+	</item>
+	<item id="NodeList/OraclePrivRole">
+		<column name="Role" visible="true" order="0" width="100"/>
+		<column name="Admin Option" visible="true" order="1" width="100"/>
+		<column name="Default" visible="true" order="2" width="100"/>
+	</item>
+</items>

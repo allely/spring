@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    //  const a = prompt('기본값을 입력하세요', '숫자로 입력')
+        const dev = prompt('폰의 종류를 쓰세요', '아이폰/안드로이드/아이패드/갤럭시노트')
+        /*
+        // a값 비교
+        if (a == 5) {
+            alert('5입니다')
+        } else if (a == 10) {
+            alert('10입니다')
+        } else {
+            alert('5도 아니고 10도 아닙니다')
+        }
+        */
+        
+        ///switch case
+        switch (dev) {
+            case '아이폰': 
+                alert('아이폰입니다!')
+                //이후 실행 중지 위해 break 필수
+                break;
+            case '안드로이드':
+                alert('안드로이드입니다!')
+                break;
+            case '아이패드':
+                alert('아이패드입니다!')
+                break;
+            case '갤럭시노트':
+                alert('갤럭시노트입니다!')
+                break;
+            default:
+                alert('무슨 종류인지 모르겠습니다.')
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

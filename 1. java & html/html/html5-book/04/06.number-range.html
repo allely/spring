@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자입력</title>
+</head>
+<body>
+    <ul>
+            <!--type="number"--> 
+        <li><!--스핀 박스(화살표 클릭)로 숫자 1씩 증감-->
+            <label class="reg" for="member">참여인원<small>(최대10명)</small></label>
+            <input type="number" id="member" value="1" min="0" max="10" step="1">
+        </li>
+        <li> <!--스핀 박스로 숫자 5씩 증감-->
+            <label class="reg" for="stuffs">지원물품<small>(1인당 5개)</small></label>
+            <input type="number" id="stuffs" value="1" min="0" max="50" step="5">
+        </li>
+             <!--type="range"-->
+        <li> <!--슬라이드 막대로 숫자 지정-->
+            <label class="reg" for="satis">희망 단계<small>(하,중,상)</small></label>
+            <input type="range" id="satis" value="1" min="0" max="10" step="1">
+        </li>
+    </ul>
+</body>
+</html>

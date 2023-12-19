@@ -1,0 +1,16 @@
+package com.me.dao;
+
+import com.me.common.DBConnPool;
+import com.me.dto.FileDto;
+
+public class FileDao extends DBConnPool{
+
+	public int regFile(FileDto fileDto) {
+		String sql = "";
+		int res = 0;
+		
+		
+		return res;
+	}
+	
+}

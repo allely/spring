@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 맵 만들기</title>
+</head>
+<body>
+    <img src="images/kids.jpg" alt="" usemap=":#favorites">
+    <map name="favorites">
+        <!--사각형 모양, 좌표 (10,10)부터 (160,200)까지의 영역에, 링크 연결-->
+        <area shape="rect" coords="10,10,160,200" href="http://cafe.naver.com/doitHTML5" target="_blanck" alt="do it html5 네이버 카페로 가기">
+        <!--사각형 모양, 좌표 (220,10)부터 (380,200)까지의 영역에, 링크 연결-->
+        <area shape="rect" coords="220,10,380,200" href="http://www.facebook.com/do.it.HTML5" target="_blanck" alt="do it html5 페이스북 페이지로 가기">
+    </map>
+</body>
+</html>

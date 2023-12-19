@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div-test{
+            border:1px solid;
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            // change : 요소에 변경 사항이 있으면 실행되는 함수
+           
+            selectColor.addEventListener('change', changeColor);
+        }
+        /*
+            color요소의 선택된 색상으로 div박스의 색상을 변경
+        */
+        function changeColor(){
+            //alert('test');
+            // 요소를 선택하는 방법 2가지
+            let selectId1 = document.getElementById("selectColor");
+            let selectId2 = document.querySelector("#selectColor");
+            // 아이디로 요소를 선택
+            selectId3 = selectColor.value;
+
+            console.log(selectId1, selectId2, selectId3);
+
+            let color = selectId3;
+
+            let div = document.querySelector(".div-test");
+            div1.style.backgroundColor = color;
+        }
+    </script>
+    <h2>개요 실습 문제</h2>
+    <hr>
+    <h2>문제 1. 색상 변경하기</h2>
+    <p>
+        색상 선택 후 변경 버튼을 클릭하면 색상이 변경되도록 만들기        
+    </p>
+
+    <div id = "div1" class="div-test">aa</div>
+        <input type="color" id="selectColor">
+        <p>addEventListener를 이용하는 방법 : input color 변경 시 div 박스 색상 변경</p>
+      
+        <p>onclick 속성을 이용하는 방법 : addEventListener 제거 시 색상 변경 후 버튼으로 동작 확인.</p>
+        <button onclick="changeColor();">변경</button>
+    
+        <h2>문제 2. 크기 변경하기</h2>
+        <p>
+            버튼에 따라 크기 조절이 가능하도록 만들기
+        </p>
+            
+        <div id="div2" class="div-test"></div>
+        <button onclick="setSize(1)">50*50</button>
+        <button onclick="setSize(2)">100*100</button>
+        <button onclick="setSize(3)">200*200</button>
+
+        <script>
+
+            function setSize(idx){
+                if(idx == 1){
+                    alert(idx);
+                    div2.style.width = '50px';
+                    div2.style.height = '50px';
+                }else if(idx == 2){
+                    alert(idx);
+                    div2.style.width = '100px';
+                    div2.style.height = '100px';
+                }else if(idx == 3){
+                    alert(idx);
+                    div2.style.width = '200px';
+                    div2.style.height = '200px';
+                }
+            }
+        </script>
+    
+    <h2>문제 3. 테이블 만들기</h2>
+    <p>
+        prompt()로 사용자로부터 행과 열의 개수를 입력받아 테이블 만들기 <br>
+        아래의 div 태그에 innerHTML 속성을 사용해서 만들어진 테이블 포함한다.
+    </p>
+    <button id="makeTableBtn">테이블 생성</button>
+    <div id="div3"></div>
+
+    <script>
+        makeTableBtn.addEventListener('click', makeTable);
+
+        function makeTable() {
+            let row = prompt('테이블의 행의 갯수는?');
+            let col = prompt('테이블의 열의 갯수는?');
+
+            alert(`${row}행 ${col}열의 테이블을 생성합니다.`);
+
+            let table = "<table border='1'>";
+            for(let i = 0; i < row; i++){
+                table += " <tr>";
+                for(let j=0; j < col; j++){
+                    table += `<td>${i+'-'+j}</td>`;
+                }
+                      +" </tr>";
+                
+            }
+            table += "</table>";
+
+            div3.innerHTML = table;
+        }
+
+    </script>
+
+</body>
+</html>

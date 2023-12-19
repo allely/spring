@@ -1,0 +1,10 @@
+package ch02.sec04.exam03;
+
+public class ContinueKeyCodeReadExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

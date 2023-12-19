@@ -1,0 +1,12 @@
+section {
+  width: 500;
+  padding: px;
+  border: 5px solid;
+}
+h2 {
+  color:blue; /* 글자 색 */
+}
+p {
+  font-size:0.9em;  /* 글자 크기 */
+  line-height: 2.0;  /* 줄간격 */
+}

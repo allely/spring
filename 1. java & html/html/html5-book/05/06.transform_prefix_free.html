@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>외부모듈 라이브러리</title>
+    <!--호환성을 위해 css외부모듈 라이브러리 추가-->
+    <script src="prefixfree.min.js"></script>
+    <style>
+        .box {
+            position: absolute;
+            left: 50px;     /* 페이지에서의 위치 조정 */
+            top: 70px;
+            width: 100px;
+            height: 60px;
+            background-color: orange;   /* 배경색 */
+            border: 2px solid greenyellow;  /* 박스 테두리 색 */
+            text-align: center;     /* 가운데 정렬 */
+            line-height: 60px;      /* 박스 위에서부터의 거리 */
+        }
+        .box:hover {
+
+            /* 특정 모양을 변형 
+            transform: 변형동작(매개변수) 
+                rotate(회전각) : 회전각만큼 회전*/
+            transform: rotate(15deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Mouse Over</div>
+</body>
+</html>

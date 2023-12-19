@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drivers>
+	<provider id="mysql">
+		<driver id="mariaDB" categories="sql" name="MariaDB" class="org.mariadb.jdbc.Driver" url="jdbc:mariadb://{host}[:{port}]/[{database}]" port="3306" defaultUser="root" description="MariaDB JDBC driver" custom="false">
+			<library type="jar" path="maven:/org.mariadb.jdbc:mariadb-java-client:RELEASE" custom="false" version="3.0.7">
+				<file id="org.mariadb.jdbc:mariadb-java-client:RELEASE" version="3.0.7" path="${drivers_home}\maven\maven-central\org.mariadb.jdbc\mariadb-java-client-3.0.7.jar"/>
+			</library>
+			<library type="license" path="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt" custom="false">
+				<file id="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt" path="${drivers_home}\remote\licenses\old-licenses\lgpl-2.1.txt"/>
+			</library>
+		</driver>
+	</provider>
+	<provider id="oracle">
+		<driver id="oracle_thin" categories="sql" name="Oracle" class="oracle.jdbc.OracleDriver" url="jdbc:oracle:thin:@{host}[:{port}]/{database}" port="1521" defaultDatabase="ORCL" defaultUser="system" description="Oracle JDBC driver" custom="false">
+			<library type="jar" path="maven:/com.oracle.database.jdbc:ojdbc8:RELEASE" custom="false" version="12.2.0.1">
+				<file id="com.oracle.database.jdbc:ojdbc8:RELEASE" version="12.2.0.1" path="${drivers_home}\maven\maven-central\com.oracle.database.jdbc\ojdbc8-12.2.0.1.jar"/>
+				<file id="com.oracle.database.jdbc:ucp:12.2.0.1" version="12.2.0.1" path="${drivers_home}\maven\maven-central\com.oracle.database.jdbc\ucp-12.2.0.1.jar"/>
+				<file id="com.oracle.database.security:oraclepki:12.2.0.1" version="12.2.0.1" path="${drivers_home}\maven\maven-central\com.oracle.database.security\oraclepki-12.2.0.1.jar"/>
+				<file id="com.oracle.database.security:osdt_cert:12.2.0.1" version="12.2.0.1" path="${drivers_home}\maven\maven-central\com.oracle.database.security\osdt_cert-12.2.0.1.jar"/>
+				<file id="com.oracle.database.security:osdt_core:12.2.0.1" version="12.2.0.1" path="${drivers_home}\maven\maven-central\com.oracle.database.security\osdt_core-12.2.0.1.jar"/>
+				<file id="com.oracle.database.ha:simplefan:12.2.0.1" version="12.2.0.1" path="${drivers_home}\maven\maven-central\com.oracle.database.ha\simplefan-12.2.0.1.jar"/>
+				<file id="com.oracle.database.ha:ons:12.2.0.1" version="12.2.0.1" path="${drivers_home}\maven\maven-central\com.oracle.database.ha\ons-12.2.0.1.jar"/>
+			</library>
+			<library type="jar" path="maven:/com.oracle.database.nls:orai18n:RELEASE" custom="false" version="12.2.0.1">
+				<file id="com.oracle.database.nls:orai18n:RELEASE" version="12.2.0.1" path="${drivers_home}\maven\maven-central\com.oracle.database.nls\orai18n-12.2.0.1.jar"/>
+			</library>
+			<library type="jar" path="maven:/com.oracle.database.xml:xdb6:RELEASE" custom="false" version="12.2.0.1">
+				<file id="com.oracle.database.xml:xdb6:RELEASE" version="12.2.0.1" path="${drivers_home}\maven\maven-central\com.oracle.database.xml\xdb6-12.2.0.1.jar"/>
+				<file id="com.oracle.database.xml:xmlparserv2:12.2.0.1" version="12.2.0.1" path="${drivers_home}\maven\maven-central\com.oracle.database.xml\xmlparserv2-12.2.0.1.jar"/>
+			</library>
+			<library type="jar" path="maven:/com.oracle.database.xml:xmlparserv2:RELEASE" custom="false" version="12.2.0.1">
+				<file id="com.oracle.database.xml:xmlparserv2:RELEASE" version="12.2.0.1" path="${drivers_home}\maven\maven-central\com.oracle.database.xml\xmlparserv2-12.2.0.1.jar"/>
+			</library>
+		</driver>
+	</provider>
+</drivers>

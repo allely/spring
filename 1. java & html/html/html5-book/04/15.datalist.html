@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 목록</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>수강 과목을 선택하세요</legend>
+            <ul>
+                <li>
+                    <label for="interest">관심분야</label>
+                    <input type="text" id="interest" list="choices">
+                    <!--datalist : 데이터 목록 중에서 값을 선택하도록-->
+                    <!--label : 사용자를 위해 브라우저에 표시할 레이블
+                                지정하지 않을 경우 value값을 레이블로 사용-->
+                    <datalist id="choices">
+                        <option value="grammer" label="문법"></option>
+                        <option value="voca" label="어휘"></option>
+                        <option value="speaking" label="회화"></option>
+                        <option value="listening" label="리스닝"></option>
+                        <option value="news" label="뉴스청취"></option>
+
+                    </datalist>
+                </li>
+            </ul>
+
+        </fieldset>
+    </form>
+</body>
+
+</html>
