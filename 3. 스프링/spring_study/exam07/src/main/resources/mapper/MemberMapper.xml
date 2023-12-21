@@ -16,18 +16,21 @@
     </select>
 
     <select id="getList" resultType="models.member.Member">
-<!--        비교기호(< / >) 그대로 사용할 수 있도록-->
-        <![CDATA[
+
         SELECT * FROM MEMBER
         <where>
             <if test="sdate != null">
+                <!-- 비교기호(< , >) 그대로 사용할 수 있도록-->
+                <![CDATA[
                 REG_DT >= #{sdate}
+                ]]>
             </if>
             <if test="edate != null">
-                REG_DT <= #{edate}
+                <![CDATA[
+                AND REG_DT <= #{edate}
+                ]]>
             </if>
         </where>
         ORDER BY REG_DT DESC
-        ]]>
     </select>
 </mapper>

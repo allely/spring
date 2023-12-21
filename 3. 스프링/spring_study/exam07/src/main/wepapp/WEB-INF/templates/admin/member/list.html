@@ -13,5 +13,25 @@
         <button type="submit" th:text="#{조회하기}"></button>
     </form>
 
+    <table border="1">
+        <thead>
+            <tr>
+                <th th:text="#{순번}"></th>
+                <th th:text="#{아이디}"></th>
+                <th th:text="#{회원명}"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="member, status : ${members}" th:object="${member}">
+                <th th:text="${status.count}"></th>
+                <th th:text="*{userId}"></th>
+                <th th:text="*{userPw}"></th>
+            </tr>
+
+        </tbody>
+
+
+    </table>
+
 </main>
 </html>

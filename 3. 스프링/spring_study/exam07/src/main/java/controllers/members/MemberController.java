@@ -74,7 +74,7 @@ public class MemberController {
 
 //        model.addAttribute("requestJoin", form);
 
-        // response.sendRedirect(request.getContextPath() + "/member/login") // 아래 return과 같음
+        // response.sendRedirect(request.getContextPath() f+ "/member/login") // 아래 return과 같음
         // Location:주소
 //        return "redirect:/member/login";
         return "redirect:/member/login";     /*주소는 바뀌지 않고 출력버퍼만 바뀐다.

@@ -46,7 +46,8 @@ dependencies {
     implementation 'jakarta.validation:jakarta.validation-api:3.0.2'
     implementation 'org.hibernate.validator:hibernate-validator:8.0.1.Final'
     implementation 'org.mindrot:jbcrypt:0.4'
-    implementation 'org.mybatis:mybatis-typehandlers-jsr310:1.0.2'
+//    implementation 'org.mybatis:mybatis-typehandlers-jsr310:1.0.2'
+                // 최신버전의 마이바티스에서는 사용할 필요 없다
 
 //    testcompileOnly 'jakarta.servlet:jakarta.servlet-api:6.0.0'
 //    testcompileOnly 'jakarta.servlet.jsp:jakarta.servlet.jsp-api:3.1.1'

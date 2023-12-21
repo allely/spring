@@ -9,7 +9,9 @@ import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.validation.Validator;
 import org.springframework.web.servlet.config.annotation.*;
 import org.thymeleaf.extras.java8time.dialect.Java8TimeDialect;
@@ -21,7 +23,7 @@ import java.lang.reflect.Member;
 
 @Configuration
 @EnableWebMvc   // 프록시 자동화 설정   ?
-@Import(DbConfig.class) //
+@Import(DbConfig2.class) //
 public class MvcConfig implements WebMvcConfigurer {    // web.xml에서 설정한 init-param의 value
 
     @Autowired
@@ -98,6 +100,9 @@ public class MvcConfig implements WebMvcConfigurer {    // web.xml에서 설정�
         registry.addResourceHandler("/**")      // 기본 경로의 하위 경로를 포함한 모두를 검색
                 .addResourceLocations("classpath:/static/");    // resource폴더의 static
 
+        registry.addResourceHandler("/upload/**")
+                .addResourceLocations("file:///c:/uploads/");
+                                // 슬래시(/) 하나를 escape문자로 인식하여 file://로 읽는다.
     }
 
     @Override
@@ -127,5 +132,12 @@ public class MvcConfig implements WebMvcConfigurer {    // web.xml에서 설정�
     @Bean
     public Utils utils() {
         return new Utils();
+    }
+
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer configurer() {   // properties 설정을 사용하는 메서드
+        PropertySourcesPlaceholderConfigurer conf = new PropertySourcesPlaceholderConfigurer();
+        conf.setLocations(new ClassPathResource("application.properties"));
+        return conf;
     }
 }
