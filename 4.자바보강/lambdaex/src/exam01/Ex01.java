@@ -18,16 +18,16 @@ public class Ex01 {
         int[] nums2 = calc(nums, cal);
          */ // 하나의 기능만 수행하는데 많은 줄을 차지하고 있다고 판단.
 
-        /* //방법2 직접 매개변수에 넣어서 사용
+        //방법2 직접 매개변수에 넣어서 사용
         int[] nums2 = calc(nums, new Calculator() {
             public int square(int num) {
                 return num * num;
             }
         });
-         */
+
 
         // 더 짧게 사용할 수 있게 하나의 식으로 표현하는 방법 -> 람다식
-        int[] nums2 = calc(nums, x-> x * x);
+       //int[] nums2 = calc(nums, x-> x * x);
 
         System.out.println(Arrays.toString(nums2));
     }
