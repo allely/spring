@@ -1,6 +1,6 @@
 package ch07.extra.exam00;
 
-public class InttoStringExample {
+public class InttoStringExample {psv
 	public static void main(String[] args) {
 		//기본타입의 자동 형변환
 		//스트링 -> 숫자보다 큼

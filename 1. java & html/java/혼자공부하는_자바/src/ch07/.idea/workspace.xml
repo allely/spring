@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f1558eea-cb5f-41c8-9dc7-8a74ae87d898" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../../4.자바보강/ioex/src/exam05/Ex01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../5. 스프링부트/exam02/src/test/java/org/choongang/japex/Ex09Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra/exam00/InttoStringExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/extra/exam00/InttoStringExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../5. 스프링부트/exam02/src/main/java/org/choongang/entities/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../5. 스프링부트/exam02/src/main/java/org/choongang/entities/Member.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../5. 스프링부트/exam02/src/test/java/org/choongang/japex/Ex08Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../5. 스프링부트/exam02/src/test/java/org/choongang/japex/Ex08Test.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2aADe0DSNZIpPPP0VdQSzSMZAY6" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/박범수/1. java & html/java/혼자공부하는_자바/src/ch07"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f1558eea-cb5f-41c8-9dc7-8a74ae87d898" name="Changes" comment="" />
+      <created>1703752581901</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703752581901</updated>
+    </task>
+    <servers />
+  </component>
+</project>

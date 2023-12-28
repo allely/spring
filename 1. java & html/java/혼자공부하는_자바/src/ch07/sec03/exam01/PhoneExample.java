@@ -1,4 +1,4 @@
-package ch07.sec03.exam01;
+package exam01;
 
 public class PhoneExample {
 

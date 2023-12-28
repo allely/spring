@@ -36,7 +36,7 @@ public class Member extends Base{
 
 
     @ToString.Exclude   // 참조 끊음
-    @OneToMany(mappedBy = "member", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "member", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     private List<BoardData> items = new ArrayList<>();
 
     @OneToOne(fetch = FetchType.LAZY)

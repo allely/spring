@@ -1,5 +1,7 @@
 package org.choongang.japex;
 
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import org.choongang.entities.BoardData;
 import org.choongang.entities.HashTag;
 import org.choongang.repositories.BoardDataRepository;
@@ -25,6 +27,9 @@ public class Ex08Test {
     @Autowired
     private HashTagRepository hashTagRepository;
 
+    @PersistenceContext
+    private EntityManager em;
+
     @BeforeEach
     void init() {
         List<HashTag> tags = new ArrayList<>();
@@ -44,6 +49,14 @@ public class Ex08Test {
             items.add(item);
         }
         boardDataRepository.saveAllAndFlush(items);
+        em.clear();     // 영속성 비우기
+        /*
+        find(조회) 한 번 한 후에는 영속성 컨텍스트 안에 존재함.
+        다시 find하면 이미 있기 때문에 쿼리를 실행하지 않음.
+        컨텍스트 안에 있는 데이터를 가져옴.
+        2차캐시 역할. 성능에 좋다.
+        다시 조회하기 위해 clear함
+        */
     }
 
     @Test
