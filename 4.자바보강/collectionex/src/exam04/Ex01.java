@@ -9,15 +9,15 @@ public class Ex01 {
         // 키 자료형의 Comparable 인터페이스
         // 대안 정렬 기준 java.util.Comparator 인터페이스
         TreeMap<String, String> members = new TreeMap<>(Comparator.reverseOrder());
-
+        //입력
         members.put("user01", "이이름");
         members.put("user02", "김이름");
         members.put("user03", "박이름");
-
+        //수정
         members.put("user02", "(수정)김이름");
-
+        //삭제
 //        members.remove("user02");
-
+        //조회
         String name = members.get("user02");
         System.out.println(name);
 

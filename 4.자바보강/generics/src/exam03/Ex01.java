@@ -15,7 +15,6 @@ public class Ex01 {
         pearBox.add(new Pear());
         pearBox.add(new Pear());
 
-
         Juicer.make2(pearBox);
     }
 }

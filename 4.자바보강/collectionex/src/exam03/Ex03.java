@@ -18,5 +18,6 @@ public class Ex03 {
         numbers.add(5);
         numbers.add(15);
 
+        System.out.println(numbers);
     }
 }
