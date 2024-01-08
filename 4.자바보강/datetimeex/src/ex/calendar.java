@@ -33,15 +33,26 @@ public class calendar {
 
         // 1일의 요일부터 출력하도록
 //        System.out.println(date.getMonth().maxLength());  // 월의 마지막 일
-        for(int j = 0; j < dayOfWeek + 1; j++) {
-            System.out.print("\t  \t");
+
+        if (date.getDayOfWeek() == DayOfWeek.SUNDAY) {
+
+        } else {
+            for (int j = 0; j < dayOfWeek + 1; j++) {
+                System.out.print("\t  \t");
+            }
         }
+
         for (int i = 1; i < date.getMonth().maxLength() + 1; i++) {
             // 일요일이면 다음 줄로 이동 후 출력
-            if (LocalDate.of(year, month, i).getDayOfWeek() == DayOfWeek.SUNDAY) {
-                System.out.println();
+            if (LocalDate.of(year, month, i).getDayOfWeek() == DayOfWeek.SUNDAY && date.getDayOfMonth() == 1) {
+                //  1일은 예외
+                if(LocalDate.of(year, month, i).equals(date)) {
+
+                } else {
+                    System.out.println();
+                }
             }
-            System.out.printf("\t%s\t", i); //
+            System.out.printf("\t%2d\t", i); //
         }
     }
 
