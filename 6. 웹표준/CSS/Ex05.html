@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <style>
+            /* li:first-child {
+                background: red;
+      }
+            li:last-child {
+                background: blue;
+            } */
+            
+            /* li:nth-child(1) {
+                background: #999;
+            } */
+
+            li:nth-child(2n) {            
+                background: #999;
+            }             
+            li:nth-child(2n-1) {
+                background: #0003;
+            }
+
+            li:nth-of-type(3n+2) {
+                background: green;
+            }
+            li:nth-of-type(5n-1) {
+                background: blue;
+            }
+
+            li:not(.menu5) {
+                background: black;
+            }
+
+            ul::before {
+                content: 'before';
+                height: 300px;
+                background: orange;
+            }
+            ul:after {
+                content: 'after';
+            }
+        </style>
+        <ul>
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+            <li>메뉴4</li>
+            <li class="menu5">메뉴5</li>
+            <li>메뉴6</li>
+            <li>메뉴7</li>
+            <li>메뉴8</li>
+            <li>메뉴9</li>
+            <li>메뉴10</li>
+        </ul>
+    </body>
+</html>
