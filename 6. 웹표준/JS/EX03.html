@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <style>
+            .box { padding: 150px; }
+            .box1 {background: grey; }
+            .box2 {background: orange; }
+            .box3 {background: green; }
+        </style>
+        <script>
+            window.addEventListener("DOMContentLoaded", function() {
+                const box1 = document.querySelector(".box1");
+                const box2 = document.querySelector(".box2");
+                const box3 = document.querySelector(".box3");
+                box1.addEventListener("click", function(e) {
+                    console.log("box1");
+                    e.stopPropagation(); // 전파 차단.
+                });
+                box2.addEventListener("click", function() {
+                    console.log("box2");
+                }, true); // 이벤트 전파가 캡쳐링 단계에서 전파 ? = 캡쳐링된 이벤트(box2 - true)가 우선되는 듯?
+                box3.addEventListener("click", function() {
+                    console.log("box3");
+                });
+            }); // 중첩되어 있는 박스 같이 클릭되어 실행
+        </script>
+        <div class="box box3">box1
+            <div class="box box2">box2
+                <div class="box box1">BOX1</div>
+            </div>
+        </div>
+    </body>
+</html>
